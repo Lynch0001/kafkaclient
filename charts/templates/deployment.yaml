@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafkaclient-deployment
+  labels:
+    app: kafkaclient
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kafkaclient
+  template:
+    metadata:
+      labels:
+        app: kafkaclient
+    spec:
+      containers:
+        - name: kafkaclient
+          image: docker.io/library/kafkaclient:1.0
+          ports:
+            - containerPort: 8085
+              name: inbound
+              protocol: TCP
