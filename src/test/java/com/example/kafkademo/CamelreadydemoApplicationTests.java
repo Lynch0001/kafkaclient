@@ -9,7 +9,7 @@ class CamelreadydemoApplicationTests {
 
     public static void main(String[] args) throws Exception {
         System.out.println("STARTING CamelReady Test Application");
-        Logger log = LogManager.getLogger(kafkaClientDemoApplication.class);
+        Logger log = LogManager.getLogger(KafkaClientDemoApplication.class);
         log.debug("Starting Test App");
         Main main = new Main();
         main.setApplicationContextUri("CamelContext.xml");
